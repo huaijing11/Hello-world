@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定一重启 | DingYi Restart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.8;
+        }
+        
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #64b5f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.1em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #90caf9;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+        
+        .meta {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .meta-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            min-width: 120px;
+        }
+        
+        .meta-label {
+            font-size: 0.9em;
+            color: #64b5f6;
+            margin-bottom: 5px;
+        }
+        
+        .meta-value {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        .moat-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            border-left: 4px solid #64b5f6;
+        }
+        
+        .moat-title {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #64b5f6;
+        }
+        
+        .moat-list {
+            list-style: none;
+        }
+        
+        .moat-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .moat-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #64b5f6;
+        }
+        
+        .declaration {
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 2;
+        }
+        
+        .timestamp {
+            text-align: center;
+            margin-top: 30px;
+            color: #90caf9;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+        
+        button {
+            display: block;
+            margin: 30px auto 0;
+            padding: 12px 30px;
+            background: transparent;
+            border: 2px solid #64b5f6;
+            color: #64b5f6;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background: #64b5f6;
+            color: #1e3c72;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(100, 181, 246, 0.4);
+        }
+        
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(100, 181, 246, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>定一重启</h1>
+        <div class="subtitle">从被定价到自我定价</div>
+        
+        <div class="meta">
+            <div class="meta-item">
+                <div class="meta-label">年龄</div>
+                <div class="meta-value">44</div>
+            </div>
+            <div class="meta-item">
+                <div class="meta-label">状态</div>
+                <div class="meta-value">回归</div>
+            </div>
+            <div class="meta-item">
+                <div class="meta-label">坐标</div>
+                <div class="meta-value">云端</div>
+            </div>
+        </div>
+
+        <div class="moat-section">
+            <div class="moat-title">三面护城河 · Three Moats</div>
+            <ul class="moat-list">
+                <li><strong>思想之墙：</strong>儒家文章 × 24篇 · 定一体系确立</li>
+                <li><strong>逻辑之墙：</strong>Java/Python · 自动化工具铸造</li>
+                <li><strong>呈现之墙：</strong>HTML/全栈 · 数字不动产构建</li>
+            </ul>
+        </div>
+
+        <div class="declaration">
+            <p>曾困泥沼，受控于情绪暴力与认知囚禁。</p>
+            <p>今立高地，以代码为剑，以逻辑为盾。</p>
+            <p>不再适配，不再兼容，不再降级。</p>
+            <p><strong>只做自己，只找同频，只定于一。</strong></p>
+        </div>
+
+        <button onclick="revealMessage()">验证系统状态</button>
+        
+        <div id="message" class="hidden-message">
+            <p>系统运行正常 | 算力充足 | 进程：DingYi-Restart-2024</p>
+            <p>所有毒性进程已终止 | 内存清理完成 | 准备建造</p>
+        </div>
+
+        <div class="timestamp">
+            System initialized: 2024-02-08<br>
+            Location: GitHub / Local / Cloud
+        </div>
+    </div>
+
+    <script>
+        function revealMessage() {
+            const msg = document.getElementById('message');
+            if (msg.style.display === 'none' || msg.style.display === '') {
+                msg.style.display = 'block';
+                console.log('定一系统已激活');
+            } else {
+                msg.style.display = 'none';
+            }
+        }
+        
+        // 控制台彩蛋
+        console.log('%c定一重启', 'font-size: 20px; color: #64b5f6;');
+        console.log('%c44岁，不是终点，是起点。', 'font-size: 12px; color: #90caf9;');
+        console.log('GitHub: github.com/[你的用户名]/dingyi-restart');
+    </script>
+</body>
+</html>
